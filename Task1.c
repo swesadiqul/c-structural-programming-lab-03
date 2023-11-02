@@ -14,14 +14,11 @@ int main() {
     // Task-01(c)
     printf("c) ");
     for(int c=18; c<=63; c=c+9){
-        printf("%d%s", c, (c < 63) ? ", " : "\n");
-    }
-    // // Task-01(d)
-    int values[] = {18, -27, 36, -45, 54, -63};
-    int length = sizeof(values) / sizeof(values[0]);
-    printf("d) ");
-    for (int d = 0; d < length; d++) {
-        printf("%d%s", values[d], (d < length - 1) ? ", " : "\n");
+        if(c % 2 !=0){
+            printf("%d%s", -c, (c < 63) ? ", " : "\n");
+        }else{
+            printf("%d%s", c, (c < 63) ? ", " : "\n");
+        }
     }
     return 0;
 }
